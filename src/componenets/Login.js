@@ -15,7 +15,21 @@ const Login = (props) => {
 			<Section>
 				<Hero>
 					<h1>Welcome to your professional community</h1>
+					<img src='/images/login-hero.svg' alt='' />
 				</Hero>
+				<Form>
+					<Google>
+						<img src='/images/google.svg' alt='' />
+						Sign in with Google
+					</Google>
+					<ORSection>
+						{/* <Line></Line> */}
+						<ORText>or</ORText>
+						{/* <Line></Line> */}
+					</ORSection>
+
+					<NewLinkedIn>New to LinkedIn? Join now</NewLinkedIn>
+				</Form>
 			</Section>
 		</Container>
 	);
@@ -38,7 +52,6 @@ const Nav = styled.nav`
 	& > a {
 		width: 135px;
 		height: 34px;
-		/*in phone*/
 		@media (max-width: 768px) {
 			padding: 0 5px;
 		}
@@ -48,8 +61,8 @@ const Nav = styled.nav`
 const Join = styled.a`
 	font-size: 16px;
 	padding: 10px 12px;
-	border-radius: 4px;
 	text-decoration: none;
+	border-radius: 4px;
 	color: rgba(0, 0, 0, 0.6);
 	margin-right: 12px;
 	&:hover {
@@ -64,6 +77,7 @@ const SignIn = styled.a`
 	color: #0a66c2;
 	border-radius: 24px;
 	transition-duration: 167ms;
+	font-size: 16px;
 	font-weight: 600;
 	line-height: 40px;
 	padding: 10px 24px;
@@ -88,8 +102,8 @@ const Section = styled.section`
 	flex-wrap: wrap;
 	width: 100%;
 	max-width: 1128px;
+	align-items: center;
 	margin: auto;
-	/*in phone*/
 	@media (max-width: 768px) {
 		margin: auto;
 		min-height: 0px;
@@ -100,19 +114,104 @@ const Hero = styled.div`
 	width: 100%;
 	/* background-color: red; */
 	h1 {
-		text-align: start;
 		padding-bottom: 0;
 		width: 55%;
 		font-size: 56px;
 		color: #2977c9;
 		font-weight: 200;
 		line-height: 70px;
+		text-align: start;
 		@media (max-width: 768px) {
 			text-align: start;
 			font-size: 20px;
 			width: 100%;
 			line-height: 2;
 		}
+	}
+
+	img {
+		/*always on top*/
+		/* z-index: -1; */
+		width: 700px;
+		height: 670px;
+		position: absolute;
+		bottom: -2px;
+		right: -150px;
+		@media (max-width: 768px) {
+			top: 230px;
+			width: initial;
+			position: initial;
+			height: initial;
+		}
+	}
+`;
+
+const Form = styled.div`
+	/* background-color: red; */
+	margin-top: 100px;
+	width: 408px;
+
+	@media (max-width: 768px) {
+		margin-top: 20px;
+	}
+`;
+const Google = styled.button`
+	display: flex;
+	justify-content: center;
+	background-color: #fff;
+	align-items: center;
+	height: min-content;
+	min-height: 48px;
+	width: 100%;
+	border-radius: 24px;
+	box-shadow: inset 0 0 0 1px rgb(0 0 0 / 60%),
+		inset 0 0 0 2px rgb(0 0 0 / 0%) inset 0 0 0 1px rgb(0 0 0 / 0);
+	font-size: 16px;
+	vertical-align: middle;
+	z-index: 0;
+	transition-duration: 167ms;
+	color: rgba(0, 0, 0, 0.6);
+	&:hover {
+		background-color: rgba(207, 207, 207, 0.25);
+		color: rgba(0, 0, 0, 0.75);
+	}
+`;
+const ORSection = styled.div`
+	align-items: center;
+	/* background-color: red; */
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+`;
+const ORText = styled.p`
+	/* background-color: green; */
+	text-align: center;
+`;
+
+// const Line = styled.hr`
+// 	color: rgba(0, 0, 0, 0.65);
+// 	/* margin-left: -100px; */
+// `;
+
+const NewLinkedIn = styled.button`
+	display: flex;
+	justify-content: center;
+	background-color: #0a66c2;
+	align-items: center;
+	height: min-content;
+	min-height: 48px;
+	width: 100%;
+	border-radius: 24px;
+	border-style: none;
+	font-size: 16px;
+	vertical-align: middle;
+	z-index: 0;
+	transition-duration: 167ms;
+	color: #ffffff;
+	&:hover {
+		background-color: #004182;
 	}
 `;
 
