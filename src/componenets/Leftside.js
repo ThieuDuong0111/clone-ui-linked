@@ -77,7 +77,7 @@ const ArtCard = styled.div`
 	overflow: hidden;
 	margin-bottom: 8px;
 	background-color: #fff;
-	border-radius: 5px;
+	border-radius: 6px;
 	transition: box-shadow 83ms;
 	position: relative;
 	border: none;
@@ -119,7 +119,7 @@ const Link = styled.div`
 	font-size: 16px;
 	line-height: 1.5;
 	color: rgba(0, 0, 0, 0.9);
-	font-weight: 500;
+	font-weight: 600;
 `;
 
 const AddPhotoText = styled.div`
@@ -153,12 +153,12 @@ const Widget = styled.div`
 				}
 				&:nth-child(2) {
 					color: rgba(0, 0, 0, 1);
-					font-weight: 500;
+					font-weight: 600;
 				}
 			}
 			p {
 				color: #0a66c2;
-				font-weight: 500;
+				font-weight: 600;
 			}
 		}
 	}
@@ -188,7 +188,7 @@ const Widget = styled.div`
 			}
 			p {
 				color: #0a66c2;
-				font-weight: 500;
+				font-weight: 600;
 			}
 		}
 	}
@@ -202,10 +202,11 @@ const Premium = styled.a`
 	padding: 12px;
 	font-size: 12px;
 	display: block;
+	line-height: 1.3;
 	p:nth-child(2) {
 		color: #000000e6;
 		text-decoration: underline;
-		font-weight: 500;
+		font-weight: 600;
 	}
 	&:hover {
 		background-color: rgba(0, 0, 0, 0.08);
@@ -217,13 +218,13 @@ const Item = styled.a`
 	text-align: left;
 	padding: 12px;
 	font-size: 12px;
-	font-weight: 500;
+	font-weight: 600;
 	display: block;
 	span {
 		display: flex;
 		align-items: center;
 		color: rgba(0, 0, 0, 1);
-		font-weight: 500;
+		font-weight: 600;
 		svg {
 			color: rgba(0, 0, 0, 0.6);
 		}
